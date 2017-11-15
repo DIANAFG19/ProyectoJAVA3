@@ -54,17 +54,17 @@ public class Elementos1801Application implements CommandLineRunner {
             System.out.println(mensa);
         }*/
 
-        /*//vamos a generar un usuario
-        Usuario u = new Usuario(33868L, "Magda Hinojosa", "magdha.1307@hotmail.com");
+        //vamos a generar un usuario
+        Usuario u = new Usuario(33868L, "Diana Laura", "diana_1310fg@hotmail.com");
         //lo guardamos
-        //repoUsu.save(u);
+        repoUsu.save(u);
         
         //generamos la direccion 
         Direccion d = new Direccion(new Usuario(33868L), "Calle 13", 55130, "Ecatepec");
-        // repoDir.save(d);
+        repoDir.save(d);
         
         //Aqui haremos el join
         Direccion d2 = repoDir.findOne(1L);
-        System.out.println("Correo :" + d2.getU().getEmail() + "municipio " + d2.getMunicipio());*/
+        System.out.println("Correo :" + d2.getU().getEmail() + "municipio " + d2.getMunicipio());
     }
 }

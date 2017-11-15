@@ -13,7 +13,7 @@ public class Usuario {
     @Id
     private Long cuenta;
     private String nombre;
-    @Column(name="emai")
+    //@Column(name="emai")
     private String email;
 
     public Usuario(Long cuenta) {
