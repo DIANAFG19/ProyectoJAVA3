@@ -16,11 +16,11 @@ public class Elementos1801Application implements CommandLineRunner{
 
     @Override
     public void run(String... strings) throws Exception {
-        repoMensa.save(new Mensajito("Primero", "Mi primera vez con hibernate"));
+        /*repoMensa.save(new Mensajito("Primero", "Mi primera vez con hibernate"));
         //repoMensa.save(new Mensajito(3, "17-10-2017", "Noo temblo"));
         System.out.println("si se guardo");
 
-        /*//consulta busca uno por id
+        //consulta busca uno por id
         Mensajito m = repoMensa.findOne(1);
         System.out.println(m.getTitulo());
 
@@ -50,7 +50,5 @@ public class Elementos1801Application implements CommandLineRunner{
         for (Mensajito mensa : repoMensa.findByTitulo("Master")) {
             System.out.println(mensa);
         }*/
-
-
     }
 }
