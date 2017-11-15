@@ -126,7 +126,7 @@ public class MiUI extends UI {
                 Notification.show("Los campos son requeridos!!", Notification.TYPE_ERROR_MESSAGE);
             } else {
                 repoMensa.delete(new Mensajito(Integer.parseInt(textoBuscarId.getValue())));
-                Notification.show("Se eleimino el mensaje", Notification.TYPE_ERROR_MESSAGE);
+                Notification.show("Se elimino el mensaje", Notification.TYPE_ERROR_MESSAGE);
             }
             grid.setItems((List) repoMensa.findAll());
         });
