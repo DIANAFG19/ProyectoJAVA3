@@ -6,13 +6,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Elementos1801Application implements CommandLineRunner{
-    
-    @Autowired RepositorioMensajito repoMensa;
+public class Elementos1801Application implements CommandLineRunner {
 
-	public static void main(String[] args){
-		SpringApplication.run(Elementos1801Application.class, args);
-	}
+    @Autowired RepositorioMensajito repoMensa;
+    @Autowired RepositorioUsuario repoUsu;
+    @Autowired RepositorioDireccion repoDir;
+
+
+    public static void main(String[] args) {
+        SpringApplication.run(Elementos1801Application.class, args);
+    }
 
     @Override
     public void run(String... strings) throws Exception {
@@ -50,5 +53,18 @@ public class Elementos1801Application implements CommandLineRunner{
         for (Mensajito mensa : repoMensa.findByTitulo("Master")) {
             System.out.println(mensa);
         }*/
+
+        /*//vamos a generar un usuario
+        Usuario u = new Usuario(33868L, "Magda Hinojosa", "magdha.1307@hotmail.com");
+        //lo guardamos
+        //repoUsu.save(u);
+        
+        //generamos la direccion 
+        Direccion d = new Direccion(new Usuario(33868L), "Calle 13", 55130, "Ecatepec");
+        // repoDir.save(d);
+        
+        //Aqui haremos el join
+        Direccion d2 = repoDir.findOne(1L);
+        System.out.println("Correo :" + d2.getU().getEmail() + "municipio " + d2.getMunicipio());*/
     }
 }
